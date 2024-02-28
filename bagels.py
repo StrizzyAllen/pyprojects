@@ -10,7 +10,7 @@
 import random
 
 NUM_DIGITS = 3
-MAX_GUESSES = 10
+MAX_GUESSES = 15
 
 
 def main():
@@ -44,7 +44,7 @@ def main():
                 guess = input("> ")
             clues = getClues(guess, secretNum)
             print(clues)
-            numGuesses += 1
+#            numGuesses += 1
 
             if guess == secretNum:
                 break  # they got it correct, break out of the loop
@@ -61,6 +61,7 @@ def main():
 def getSecretNum():
     """Returns a string made up of NUM_DIGITS unique random digits."""
     numbers = list("0123456789")  # list of digits
+    letters = list("abcde") # list of letters
     random.shuffle(numbers)  # shuffle into random order
 
     # Get the first NUM_DIGITS digits in the list for the secret number:
