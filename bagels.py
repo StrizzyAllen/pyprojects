@@ -44,7 +44,7 @@ def main():
                 guess = input("> ")
             clues = getClues(guess, secretNum)
             print(clues)
-#            numGuesses += 1
+            numGuesses += 1
 
             if guess == secretNum:
                 break  # they got it correct, break out of the loop
