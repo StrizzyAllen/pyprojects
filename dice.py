@@ -1,6 +1,53 @@
 # dice.py
 import random
 
+DICE_ART = {
+    1:  (
+        "┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘",
+    ),
+    2: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘",
+    ),
+    3: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│    ●    │",
+        "│      ●  │",
+        "└─────────┘",
+    ),
+    4: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│         │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+    5: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│    ●    │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+    6: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+}
+DIE_HEIGHT = len(DICE_ART[1])
+DIE_WIDTH = len(DICE_ART[1][0])
+DIE_FACE_SEPARATOR = " "
 
 
 def roll_dice(num_dice):
@@ -36,4 +83,3 @@ num_dice_input = input("How many dice do you want to roll? [1-6]" )
 num_dice = parse_input(num_dice_input)
 # 2. Roll the dice
 roll_results = roll_dice(num_dice)
-print(roll_results) 
